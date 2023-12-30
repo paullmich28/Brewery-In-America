@@ -11,8 +11,14 @@
         </div>
     <% }%>
     
-    <form method="post">
-        <input class="transition ease-in-out duration-300 my-12 mx-2 bg-[#fb923c] hover:bg-[#f97316] font-semibold py-2 px-4 border border-[#fdba74] rounded shadow" type="submit" value="Random Brewery Search" formaction="get-random">
+    <form method="post" class="my-5">
+        <div class="w-1/4 mx-auto">
+            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="State" name="state">
+        </div>
+        <div class="grid grid-cols-2 w-fit mx-auto my-5">
+            <input class="mx-5 transition ease-in-out duration-300 bg-transparent hover:bg-[#f59e0b] text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded" type="submit" value="Random Brewery Search" formaction="get-random">
+            <input class="mx-5 transition ease-in-out duration-300 bg-transparent hover:bg-[#f59e0b] text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded" type="submit" value="Search By State" formaction="get-by-state">
+        </div>
     </form>
 </div>
 <%- include('partials/footer.ejs') %>
