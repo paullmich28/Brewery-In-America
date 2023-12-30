@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+<div class="text-center">
+    <h1 class="my-5 text-5xl font-semibold">Americans Brewery in Your Area</h1>
+    <% if (locals.name || locals.city || locals.state || locals.country ||locals.web || locals.postalCode) { %>
+        <div class="mt-12 bg-[#fb923c] w-fit mx-auto p-5 rounded-md">
+            <h1><span class="font-semibold text-xl">Brewery Name:</span><br /><span class="text-lg"><%= name %></span></h1><br />
+            <h1><span class="font-semibold text-xl">State:</span><br /><span class="text-lg"><%= state %></span></h1><br />
+            <h1><span class="font-semibold text-xl">City:</span><br /><span class="text-lg"><%= city %></span></h1><br />
+            <h1><span class="font-semibold text-xl">Postal Code:</span><br /><span class="text-lg"><%= postalCode %></span></h1><br />
+            <h1><span class="font-semibold text-xl">Website:</span><br /><span class="text-lg"><%= web %></span></h1>
+        </div>
+    <% }%>
+    
+    <form method="post">
+        <input class="transition ease-in-out duration-300 my-12 mx-2 bg-[#fb923c] hover:bg-[#f97316] font-semibold py-2 px-4 border border-[#fdba74] rounded shadow" type="submit" value="Random Brewery Search" formaction="get-random">
+    </form>
+</div>
+<%- include('partials/footer.ejs') %>
